@@ -4,14 +4,21 @@ import InputField from "./InputField";
 import DatePicker from "./DatePicker";
 import SessionList from "./SessionList";
 
-const socket = io("http://localhost:9000", {
-  reconnectionDelay: 1000,
-  reconnection: true,
+const socket = io("https://your-ngrok-url.ngrok.io", {
+  transports: ['websocket', 'polling'],
+  reconnectionDelayMax: 10000,
   reconnectionAttempts: 10,
-  transports: ['websocket'],
-  agent: false,
-  upgrade: false,
+  secure: true,
   rejectUnauthorized: false
+});
+
+// Add error handling
+socket.on('connect_error', (error) => {
+  console.error('Socket connection error:', error);
+});
+
+socket.on('connect', () => {
+  console.log('Socket connected successfully');
 });
 
 const EventForm = ({ onEventCreated }) => {
