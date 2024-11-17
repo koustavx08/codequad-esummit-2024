@@ -9,7 +9,23 @@ const io = require('socket.io')(http, {
   }
 });
 
-app.use(cors());
+app.use(cors({
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+    
+    const allowedOrigins = [
+      'http://localhost:3000',
+      'https://your-ngrok-url.ngrok.io'
+    ];
+    
+    if (allowedOrigins.indexOf(origin) === -1) {
+      return callback(new Error('CORS policy violation'), false);
+    }
+    return callback(null, true);
+  },
+  credentials: true
+}));
 
 // Socket.IO connection handling
 io.on('connection', (socket) => {
