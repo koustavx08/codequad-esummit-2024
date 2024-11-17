@@ -1,0 +1,27 @@
+/* Navbar button animation */
+.animated-button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 6px;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .animated-button:hover {
+    background-color: #1e3a8a; /* Dark blue background on hover */
+    color: #ffffff;
+    transform: translateY(-3px); /* Lift effect */
+  }
+  
+  /* Responsive menu styling */
+  @media (max-width: 768px) {
+    .animated-button {
+      width: 100%;
+      text-align: left;
+      padding: 0.75rem 1.5rem;
+    }
+  }
+  

@@ -1,0 +1,60 @@
+/* Dashboard container with gradient background */
+.dashboard-container {
+    min-height: 100vh;
+    padding: 2rem;
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* Subtle blue gradient */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/020/328/693/non_2x/3d-white-particle-wave-pattern-on-a-black-background-digital-abstract-background-can-be-applied-for-web-design-website-wallpaper-banner-or-cover-illustration-vector.jpg');
+  }
+  
+  .dashboard-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .dashboard-content {
+    max-width: 800px;
+    width: 100%;
+    background: rgb(191, 192, 196);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Section title */
+  .section-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  /* Button with animation */
+  .animated-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #4285f4;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+  }
+  
+  .animated-button:hover {
+    transform: translateY(-3px); /* Button "lift" effect */
+    background-color: #3367d6; /* Darker shade on hover */
+  }
+  
+  .animated-button:active {
+    transform: translateY(1px); /* Slight depress effect on click */
+  }
+  

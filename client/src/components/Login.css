@@ -1,0 +1,84 @@
+/* Full-screen blurred background styling */
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/020/328/693/non_2x/3d-white-particle-wave-pattern-on-a-black-background-digital-abstract-background-can-be-applied-for-web-design-website-wallpaper-banner-or-cover-illustration-vector.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    /* background-color: rgb(18, 18, 62); */
+  }
+  
+  /* Overlay effect with 50% blur */
+  .login-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+     /* background: rgba(0, 0, 0, 0.5); Dark overlay */
+    backdrop-filter: blur(8px); /* Apply blur */
+    z-index: 1;
+  }
+  
+  /* Centered login box styling */
+  .login-box {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Title styling */
+  .login-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Google button with gradient colors */
+  .google-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.75rem;
+    background: linear-gradient(45deg, #4285F4, #34A853, #FBBC05, #EA4335); /* Google colors gradient */
+    background-size: 200% 200%;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-position 0.4s ease, transform 0.2s;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .google-button:hover {
+    background-position: right center; /* Animate gradient */
+    transform: scale(1.05); /* Slight scaling on hover */
+  }
+  
+  .google-logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.5rem;
+  }
+  
+  /* Error message styling */
+  .error-message {
+    color: #e63946;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+  

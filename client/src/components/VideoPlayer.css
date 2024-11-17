@@ -1,0 +1,152 @@
+.video-frame {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin: 10px;
+  background: #000;
+  border: 1px solid lightslategrey;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.video-view {
+  position: relative;
+  width: 650px;
+  height: 350px;
+  margin: auto;
+}
+
+.video-view .video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: #1C1C1C;
+  border-radius: 10px;
+}
+
+.video-view .video-content {
+  position: absolute;
+  object-fit: cover;
+  margin-top: 280px;
+  margin-left: 280px;
+  color: aliceblue;
+}
+
+.btn-content {
+  height: 53px;
+  margin-top: -20px;
+  width: 50px;
+  background-color: #e0e0e0;
+  padding: 15px;
+  border-radius: 25px;
+  margin-left: 30px;
+}
+
+.mute-btn-content {
+  height: 50px;
+  margin-top: -20px;
+  width: 50px;
+  background-color: #d3382d;
+  padding: 15px;
+  border-radius: 25px;
+  margin-left: 30px;
+}
+
+.bi {
+  font-size: 19px;
+}
+
+.chat-wrapper,
+.participant-wrapper {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  right: 0;
+  background-color: #212032;
+  overflow-x: hidden;
+  transition: 0.7s;
+  padding-top: 60px;
+  border: 1px solid lightslategrey;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+#videoContainer {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#videoContainer > div {
+  border: 1px solid red;
+  flex: 1 1 48%;
+  min-width: 250px;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+}
+
+.control-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.control-button {
+  background: #e0e0e0;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.control-button:hover {
+  background: #d0d0d0;
+}
+
+.control-button.muted {
+  background: #d3382d;
+  color: white;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 64px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-element {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.camera-off-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.2em;
+} 
