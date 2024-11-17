@@ -4,7 +4,7 @@ import InputField from "./InputField";
 import DatePicker from "./DatePicker";
 import SessionList from "./SessionList";
 
-const socket = io("https://daba-136-232-88-2.ngrok-free.app", {
+const socket = io("https://cb67-2409-4060-2d8d-1695-749f-ce7d-bb90-e34a.ngrok-free.app/", {
   transports: ['websocket', 'polling'],
   reconnectionDelayMax: 10000,
   reconnectionAttempts: 10,

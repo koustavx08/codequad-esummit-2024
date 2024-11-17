@@ -16,7 +16,7 @@ app.use(cors({
     
     const allowedOrigins = [
       'http://localhost:3000',
-      'https://daba-136-232-88-2.ngrok-free.app'
+      'https://cb67-2409-4060-2d8d-1695-749f-ce7d-bb90-e34a.ngrok-free.app/'
     ];
     
     if (allowedOrigins.indexOf(origin) === -1) {
